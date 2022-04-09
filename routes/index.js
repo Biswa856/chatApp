@@ -1,18 +1,18 @@
-var express = require('express');
-const chatController = require('../controllers/chatController');
-var ChatController = require('../controllers/chatController')
+var express = require("express");
+const chatController = require("../controllers/chatController");
+
 var app = express.Router();
 
+app.get("/person", chatController.getPersonList);
 
-connection.connect();
+app.get("/chat-history", chatController.getChatHistory);
 
-app.get('/person',chatController.getPersonList)
+app.post("/send-message", chatController.saveMessage);
 
 
 /* GET home page. */
-app.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+app.get("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
 });
-connection.end();
 
-module.exports = router;
+module.exports = app;

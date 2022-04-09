@@ -1,10 +1,10 @@
-const mysql = require('mysql')
+const mysql = require("mysql");
+
 var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'chatApp'
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "chatapp",
 });
 
-export default connection;
-
+module.exports = connection;
