@@ -1,12 +1,7 @@
-
-import ChatBox from './component/ChatBox';
+import ChatBox from "./component/ChatBox";
 
 function App() {
-  return (
-    <div className=''>
-    <ChatBox/>
-    </div>
-  );
+  return <ChatBox />;
 }
 
 export default App;
